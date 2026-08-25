@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="todo-app">
+
+        <h2>To-Do List <img src="image/icon.png" alt="icon"></h2>
+
+        <!-- Jam & Theme -->
+        <div class="top-bar">
+            <div id="clock">00:00:00</div>
+            <button id="theme-btn">🌙</button>
+        </div>
+
+        <!-- Filter -->
+        <div class="filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Done</button>
+        </div>
+
+        <!-- Input Tugas -->
+<div class="row">
+    <input type="text" id="input-box" placeholder="Add your task...">
+    <input type="date" id="deadline-box">
+    <input type="time" id="time-box">
+    <button onclick="addTask()">Add</button>
+</div>
+        <!-- Daftar Tugas -->
+        <ul id="list-container">
+            <!-- Task akan muncul di sini -->
+        </ul>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- Sound Effect -->
+<audio id="add-sound" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+<audio id="check-sound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+<audio id="delete-sound" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
+
+</body>
+</html>
